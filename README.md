@@ -1,102 +1,55 @@
-# Cargo Toolset for VS Code
+# Vexide Toolset for VS Code
 
-## Overview
+The **Vexide Toolset** is a powerful Visual Studio Code extension designed to streamline the development and management of VEX Robotics projects. With an intuitive toolbar and a wide range of commands, this extension simplifies tasks like building, uploading, running, and managing files on VEX devices.
 
-The **Cargo Toolset** extension for Visual Studio Code provides a convenient toolbar for running common Cargo commands directly from the editor. This extension streamlines your Rust development workflow by giving you easy access to essential Cargo commands through a custom toolbar.
-
-![cargo-toolset](https://github.com/user-attachments/assets/2af643dc-22ec-4d66-ad08-9507952e1deb)
+---
 
 ## Features
 
-- **Run Commands**: Quickly run your Rust code or build projects.
-- **Build Commands**: Compile your Rust projects with various build options.
-- **Check Commands**: Check for errors and run Clippy for linting.
-- **Test Commands**: Run and manage your Rust tests.
-- **Documentation Commands**: Generate and open documentation.
-- **Package Commands**: Initialize new projects or update dependencies.
-- **Rustup Commands**: Switch between Rust toolchains.
-- **General Commands**: Access help and version information.
+- **Build and Upload**: Quickly build your project and upload it to your VEX device.
+- **Integrated Terminal**: Open a terminal for direct interaction with your robot or computer.
+- **Run Programs**: Execute your project directly from the toolbar.
+- **File Management**: List, read, and remove files on the VEX device's flash storage.
+- **Device Management**: View connected devices and take screenshots of the VEX Brain.
+- **Customizable Commands**: Easily configure command prefixes for your workflow.
 
-## Getting Started
+---
 
-1. **Install the Extension**
+## Installation
 
-   - Open VS Code.
-   - Go to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window or pressing `Ctrl+Shift+X`.
-   - Search for **Cargo Toolset**.
-   - Click **Install**.
+1. Open Visual Studio Code.
+2. Go to the Extensions view by pressing `Ctrl+Shift+X` (or `Cmd+Shift+X` on macOS).
+3. Search for **Vexide Toolset** and click **Install**.
+4. Reload VS Code to activate the extension.
 
-2. **Open the Toolbar**
+---
 
-   - After installation, open the Cargo Toolset by clicking on the **Cargo Toolset** icon in the Activity Bar on the side of the window.
+## Usage
 
-3. **Use the Toolbar**
+### Toolbar
+The extension adds a custom toolbar to the Activity Bar. Use it to access commands like:
+- **Build**: Compile your project.
+- **Upload**: Upload your project to the VEX device.
+- **Run**: Execute the project on the device.
+- **File Management**: List, read, or delete files on the device.
 
-   - The toolbar will display a list of commands categorized by their function (e.g., Run Commands, Build Commands).
-   - Click on a button to execute the corresponding Cargo command.
+### Command Palette
+You can also access all commands via the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on macOS). Look for commands prefixed with `Vexide Toolbar`.
 
 ## Commands
 
-### Run Commands
+Here’s a list of available commands:
 
-- **Run Code**: Compiles and runs the current project.
-- **Run Code (Quite)**: Compiles and runs the project with minimal output.
-
-### Build Commands
-
-- **Build**: Compiles the current project.
-- **Build Release**: Compiles the project with optimizations for release.
-- **Build Verbose**: Compiles with detailed output.
-- **Clean**: Removes build artifacts.
-- **Run Benchmarks**: Runs benchmarks for the current project.
-
-### Check Commands
-
-- **Check**: Checks the project for errors without producing a binary.
-- **Check All**: Checks all packages in the workspace for errors.
-- **Run Clippy**: Checks code for common mistakes and stylistic issues.
-
-### Test Commands
-
-- **Test Code**: Runs the tests in the current project.
-- **Test All Code**: Runs tests for all packages in the workspace.
-- **Test All (Including Ignored)**: Runs all tests, including ignored ones.
-- **Test Documentation**: Runs tests written in documentation comments.
-- **Test Without Running**: Compiles tests but doesn't execute them.
-
-### Documentation Commands
-
-- **Generate Documentation**: Generates documentation for the current project.
-- **Open Documentation**: Generates documentation and opens it in the default web browser.
-- **Generate Documentation Without Dependencies**: Generates documentation without including dependencies.
-
-### Package Commands
-
-- **Initialize New Project**: Creates a new Cargo project in the specified directory.
-- **Create New Project**: Creates a new Cargo project in a new directory.
-- **Update Cargo**: Updates dependencies to the latest versions.
-- **Fetch Dependencies**: Downloads the dependencies for the project.
-
-### Rustup Commands
-
-- **Use Nightly**: Sets the project to use the nightly Rust toolchain.
-- **Use Stable**: Sets the project to use the stable Rust toolchain.
-
-### General Commands
-
-- **Cargo Help**: Displays help information about Cargo.
-- **Cargo Version**: Shows version information about Cargo.
-- **Show Metadata**: Displays metadata about the current project and its dependencies.
-
-## Troubleshooting
-
-- **No Commands Displayed**: Ensure that you have a Rust project open and that the toolbar is properly initialized.
-- **Command Not Working**: Check the command’s syntax and ensure that you have the necessary dependencies installed.
-
-## Contributing
-
-If you encounter any issues or have suggestions for improvements, please feel free to contribute to the extension's GitHub repository.
-
-## License
-
-This extension is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+| Command                  | Description                                      |
+|--------------------------|--------------------------------------------------|
+| **Build**                | Builds the current project.                      |
+| **Upload**               | Uploads a differential patch of the project.     |
+| **Upload Cold Binary**   | Uploads a fresh monolith of the project.         |
+| **Run**                  | Runs the current project.                        |
+| **New Project**          | Creates a new project.                           |
+| **List Files**           | Lists files on the VEX device's flash storage.   |
+| **Read File**            | Reads a file from the flash storage.             |
+| **Remove File**          | Removes a file from the flash storage.           |
+| **List Devices**         | Lists all devices connected to the VEX Brain.    |
+| **Screenshot Brain**     | Takes a screenshot of the VEX Brain.             |
+| **Read Event Log**       | Reads the event log from the flash storage.      |
