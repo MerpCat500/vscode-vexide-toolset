@@ -114,6 +114,7 @@
     "test": "vscode-test"
   },
   "devDependencies": {
+    "vscode": "^1.1.37",
     "@types/mocha": "^10.0.7",
     "@types/node": "^20.17.30",
     "@typescript-eslint/eslint-plugin": "^7.14.1",
@@ -123,7 +124,5 @@
     "eslint": "^8.57.0",
     "typescript": "^5.4.5"
   },
-  "dependencies": {
-    "vscode": "^1.1.37"
-  }
+  "dependencies": {}
 }
