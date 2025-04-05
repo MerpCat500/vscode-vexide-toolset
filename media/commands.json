@@ -3,19 +3,19 @@
     {
       "id": "vexide-toolbar.build",
       "title": "Build",
-      "cargoCommand": "v5 build",
+      "cargoCommand": "v5 build --release",
       "description": "Builds the current project."
     },
     {
       "id": "vexide-toolbar.uploadDifferential",
       "title": "Upload",
-      "cargoCommand": "v5 upload",
+      "cargoCommand": "v5 upload --release",
       "description": "Upload a differential patch of current project."
     },
     {
       "id": "vexide-toolbar.uploadMonolith",
       "title": "Upload Cold Binary",
-      "cargoCommand": "v5 upload --cold",
+      "cargoCommand": "v5 upload --cold --release",
       "description": "Upload a fresh monolith of current project."
     }
   ],
