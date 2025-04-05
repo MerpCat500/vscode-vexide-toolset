@@ -1,12 +1,11 @@
-/* Import Poppins Font from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
 body {
   margin: 0;
   padding: 10px;
   font-family: "Poppins", sans-serif;
-  background-color: #1e1e1e; /* Dark industrial base */
-  color: #dcd7c9; /* Warm ivory text */
+  background-color: var(--vscode-editor-background);
+  color: var(--vscode-editor-foreground);
 }
 
 .toolbar-container {
@@ -14,9 +13,9 @@ body {
   flex-direction: column;
   gap: 15px;
   padding: 10px;
-  border: 1px solid #3e3e42;
+  border: 1px solid var(--vscode-sideBar-border);
   border-radius: 8px;
-  background-color: #2a2a2a; /* Subtle contrast */
+  background-color: var(--vscode-sideBar-background);
 }
 
 .category-section {
@@ -31,12 +30,11 @@ body {
   margin-top: 0;
   margin-bottom: 6px;
   font-size: 14px;
-  color: #c49b66; /* Brass-inspired title */
-  border-bottom: 1px solid #3e3e42;
+  color: var(--vscode-descriptionForeground);
+  border-bottom: 1px solid var(--vscode-sideBar-border);
   padding-bottom: 4px;
 }
 
-/* General Button Styling */
 .toolbar-button {
   padding: 10px 0;
   margin-bottom: 10px;
@@ -51,62 +49,85 @@ body {
   transition: background-color 0.3s ease, transform 0.3s ease;
   position: relative;
   box-sizing: border-box;
-  color: #f0ece2;
+  color: var(--vscode-button-foreground);
 }
 
-/* Rust-Inspired Muted Buttons */
 .BuildandUpload-button {
-  background-color: #4c3b2a; /* Bronze brown */
+  background-color: var(--vscode-button-background);
 }
 .BuildandUpload-button:hover {
-  background-color: #3e3023;
+  background-color: var(--vscode-button-hoverBackground);
 }
 
 .Terminal-button {
-  background-color: #3e3e42; /* Cold steel gray */
+  background-color: var(--vscode-button-background);
 }
 .Terminal-button:hover {
-  background-color: #353539;
+  background-color: var(--vscode-button-hoverBackground);
 }
 
 .RunProgram-button {
-  background-color: #5c3b28; /* Burnt sienna */
+  background-color: var(--vscode-button-background);
 }
 .RunProgram-button:hover {
-  background-color: #4b3020;
+  background-color: var(--vscode-button-hoverBackground);
 }
 
 .NewProject-button {
-  background-color: #a15c38; /* Rust orange */
+  background-color: var(--vscode-button-background);
 }
 .NewProject-button:hover {
-  background-color: #8a4e2f;
+  background-color: var(--vscode-button-hoverBackground);
 }
 
 .Flash-button {
-  background-color: #b87333; /* Aged copper */
+  background-color: var(--vscode-button-background);
 }
 .Flash-button:hover {
-  background-color: #9e602c;
+  background-color: var(--vscode-button-hoverBackground);
 }
 
 .MISC-button {
-  background-color: #6c584c; /* Earthy taupe */
+  background-color: var(--vscode-button-background);
 }
 .MISC-button:hover {
-  background-color: #5a4a40;
+  background-color: var(--vscode-button-hoverBackground);
 }
 
-/* Focus & Tooltip */
+
+.BuildandUpload-button:hover {
+  background-color: var(--vscode-button-hoverBackground);
+}
+
+.Terminal-button:hover {
+  background-color: var(--vscode-button-hoverBackground);
+}
+
+.RunProgram-button:hover {
+  background-color: var(--vscode-button-hoverBackground);
+}
+
+.NewProject-button:hover {
+  background-color: var(--vscode-button-hoverBackground);
+}
+
+.Flash-button:hover {
+  background-color: var(--vscode-button-hoverBackground);
+}
+
+.MISC-button:hover {
+  background-color: var(--vscode-button-hoverBackground);
+}
+
 .toolbar-button:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #c49b66;
+  box-shadow: 0 0 0 2px var(--vscode-focusBorder);
 }
 
 .toolbar-button .tooltip {
   visibility: hidden;
-  background-color: #3e3e42;
-  color: #f0ece2;
+  background-color: var(--vscode-editorHoverWidget-background);
+  color: var(--vscode-editorHoverWidget-foreground);
   text-align: center;
   padding: 4px 8px;
   border-radius: 4px;
@@ -133,5 +154,5 @@ body {
   margin-left: -4px;
   border-width: 4px;
   border-style: solid;
-  border-color: #3e3e42 transparent transparent transparent;
+  border-color: var(--vscode-editorHoverWidget-background) transparent transparent transparent;
 }
