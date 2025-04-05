@@ -15,13 +15,13 @@ interface CommandCategory {
 }
 
 export function activate(context: vscode.ExtensionContext) {
-  console.log("Rust Toolbar extension is now active!");
+  console.log("Vexide Toolbar extension is now active!");
 
-  const rustToolbarProvider = new RustToolbarProvider(context.extensionUri);
+  const vexideToolbarProvider = new VexideToolbarProvider(context.extensionUri);
   context.subscriptions.push(
     vscode.window.registerWebviewViewProvider(
-      RustToolbarProvider.viewType,
-      rustToolbarProvider
+      VexideToolbarProvider.viewType,
+      vexideToolbarProvider
     )
   );
 
@@ -71,16 +71,16 @@ export function activate(context: vscode.ExtensionContext) {
               );
             });
 
-            runRustCommand(commandWithArgs);
+            runVexideCommand(commandWithArgs);
           } else {
-            runRustCommand(cargoCommand);
+            runVexideCommand(cargoCommand);
           }
         })
       );
     });
 }
 
-function runRustCommand(command: string) {
+function runVexideCommand(command: string) {
   const terminal =
     vscode.window.activeTerminal || vscode.window.createTerminal("Rust");
   terminal.show();
@@ -97,7 +97,7 @@ function runRustCommand(command: string) {
   terminal.sendText(`${cargoCmdPrefix} ${command}`);
 }
 
-class RustToolbarProvider implements vscode.WebviewViewProvider {
+class VexideToolbarProvider implements vscode.WebviewViewProvider {
   public static readonly viewType = "vexide-toolbar.toolbarView";
 
   constructor(private readonly _extensionUri: vscode.Uri) {}
@@ -152,7 +152,7 @@ class RustToolbarProvider implements vscode.WebviewViewProvider {
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <link href="${styleUri}" rel="stylesheet">
-                <title>Rust Toolbar</title>
+                <title>Vexide Toolbar</title>
             </head>
             <body>
                 <div id="commandCategories"></div>

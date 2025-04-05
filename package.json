@@ -24,17 +24,18 @@
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "rustToolbar",
+          "id": "vexideToolbar",
           "title": "Vexide Toolset",
           "icon": "media/rust.png"
         }
       ]
     },
     "views": {
-      "rustToolbar": [
+      "vexideToolbar": [
         {
+          "icon": "media/rust.png",
           "type": "webview",
-          "id": "rust-toolbar.toolbarView",
+          "id": "vexide-toolbar.toolbarView",
           "name": "Vexide Toolset"
         }
       ]
@@ -96,7 +97,7 @@
     "configuration": {
       "title": "Vexide Toolset",
       "properties": {
-        "rust-toolbar.cargoCmdPrefix": {
+        "vexide-toolbar.cargoCmdPrefix": {
           "type": "string",
           "default": "cargo",
           "description": "The command prefix to use for Cargo commands (e.g., 'cargo' or 'cross')"
