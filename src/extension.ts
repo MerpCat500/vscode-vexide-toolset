@@ -92,13 +92,13 @@ function runRustCommand(command: string) {
   }
 
   const cargoCmdPrefix = vscode.workspace
-    .getConfiguration("rust-toolbar")
+    .getConfiguration("vexide-toolbar")
     .get("cargoCmdPrefix", "cargo");
   terminal.sendText(`${cargoCmdPrefix} ${command}`);
 }
 
 class RustToolbarProvider implements vscode.WebviewViewProvider {
-  public static readonly viewType = "rust-toolbar.toolbarView";
+  public static readonly viewType = "vexide-toolbar.toolbarView";
 
   constructor(private readonly _extensionUri: vscode.Uri) {}
 
