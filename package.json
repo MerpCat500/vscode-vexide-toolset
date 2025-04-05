@@ -4,7 +4,7 @@
   "publisher": "andy-hilty",
   "description": "An extension for managing and executing common Vexide commands",
   "icon": "media/logo.png",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.64.0"
   },
